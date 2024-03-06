@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import '../../assets/external/swiper-bundle.min.css';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import CustomButtons from './CustomButtons';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -871,7 +872,20 @@ const Home = () => {
                       modules={[Navigation, Pagination]}
                       className='swiper-wrapper'
                       spaceBetween={30}
-                      slidesPerView={3}
+                      breakpoints={{
+                        // Customize settings for different screen widths
+                        640: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 40,
+                        },
+                        1024: {
+                          slidesPerView: 3, //
+                          spaceBetween: 50,
+                        },
+                      }}
                       onSlideChange={() => console.log('slide change')}
                       onSwiper={(swiper) => console.log(swiper)}
                     >
