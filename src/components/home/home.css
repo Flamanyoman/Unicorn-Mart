@@ -3015,7 +3015,8 @@ img.mfp-img {
 
 .project {
   position: relative;
-  padding: 40px 0;
+  padding: 0;
+  /* border: 4px solid pink; */
 }
 .project .shape {
   top: 0;
@@ -5795,4 +5796,13 @@ section.banner.s3.s2 .container .swiper-button-prev {
 }
 .page-title .breacrumb li a:hover {
   color: var(--primary-color);
+}
+
+.project-swiper {
+  /* border: 3px solid yellow; */
+}
+
+.swiper-wrapper {
+  /* border: 3px solid green; */
+  width: 100% !important;
 }
